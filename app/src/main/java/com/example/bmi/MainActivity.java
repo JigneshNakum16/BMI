@@ -1,5 +1,6 @@
 package com.example.bmi;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         llMain = findViewById(R.id.llMain);
 
         btnCalculateBMI.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 int wt = Integer.parseInt(edtWeight.getText().toString());

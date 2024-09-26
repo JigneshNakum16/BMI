@@ -6,13 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
         EditText edtWeight,edtHeightFt,edtHeightIn;
         Button btnCalculateBMI;
         TextView txtResult;
-        LinearLayout llmain;
+        LinearLayout llMain;
 
         edtWeight = findViewById(R.id.edtWeight);
         edtHeightIn = findViewById(R.id.edtHeightIn);
         edtHeightFt = findViewById(R.id.edtHeightFT);
         btnCalculateBMI = findViewById(R.id.btnCalculateBMI);
         txtResult = findViewById(R.id.txtResult);
-        llmain = findViewById(R.id.llMain);
+        llMain = findViewById(R.id.llMain);
 
         btnCalculateBMI.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
                 if(bmi > 25){
                     txtResult.setText("You're OverWeight");
-                    llmain.setBackgroundColor(getResources().getColor(R.color.colorOW));
+                    llMain.setBackgroundColor(getResources().getColor(R.color.colorOW));
                 }else if(bmi < 18){
                     txtResult.setText("You're UnderWeight");
-                    llmain.setBackgroundColor(getResources().getColor(R.color.colorUW));
+                    llMain.setBackgroundColor(getResources().getColor(R.color.colorUW));
                 }else{
                     txtResult.setText("You're Healthy");
-                    llmain.setBackgroundColor(getResources().getColor(R.color.colorH));
+                    llMain.setBackgroundColor(getResources().getColor(R.color.colorH));
                 }
             }
         });
